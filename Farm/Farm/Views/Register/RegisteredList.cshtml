@@ -1,0 +1,38 @@
+﻿
+@{
+    ViewData["Title"] = "RegisteredList";
+}
+
+<h1>RegisteredList</h1>
+
+<table class="table table-bordered table-striped style="width:100%">
+    <thead>
+<tr>
+    <th>
+        Register User
+    </th>
+    <th>
+        Register Property
+    </th>
+    <th>
+        Register Date
+</th>
+</tr></thead>
+<tbody>
+    @foreach(var obj in Model)
+        {
+            <tr>
+                <td width="50%">
+                    @obj.UserId
+
+                </td>
+                 <td width="50%">
+                    @obj.PropertyId
+                </td>
+                <td width="50%">
+                    @obj.RegisterDate
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

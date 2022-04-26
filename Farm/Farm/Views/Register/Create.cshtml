@@ -1,0 +1,35 @@
+﻿@model Register
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+
+
+
+<form method="post">
+    <div class="border p-3 mt-4">
+        <div class="row pb-2">
+            <h2 class="text-primary">Sign Up</h2>
+        </div>
+        <div class="mb-3">
+    <label asp-for="RegisterDate"> Date</label>
+    <input asp-for="RegisterDate" type="datetime-local" class="form-control" />
+    </div>
+    <div class="mb-3">
+
+    
+
+     <label asp-for="PropertyId"> Property</label>
+    <input asp-for="PropertyId" class="form-control" />
+            </div> 
+            <label asp-for="UserId"> User</label>
+    <input asp-for="UserId" class="form-control" />
+        </div> 
+        <div class="mb-3">
+            <br />
+    <button type="submit" class="btn btn-primary" style="width:150px"> Create </button>
+    <a asp-controller="Register" asp-action="RegisteredList" class="btn btn-secondary" style="width:150px">Back</a>
+</div>
+</form>
+

@@ -1,0 +1,26 @@
+﻿@model IEnumerable<Property>
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Properties</h1>
+
+<body>
+    <li style="display:flex; justify-content:space-between; flex-wrap: wrap; margin: 20px; row-gap:20px; ">
+        @foreach(var obj in Model)
+        {
+            
+               <div class="card" style="border-radius:5px;">
+                   <a href="Property/@obj.PropertyId">
+  <img src=@obj.ImageUrl alt="Avatar" style="width:280px; height:150px;">
+  </a>
+  <div class="container">
+    <h4><b>@obj.Title</b></h4>
+     
+     <p>@obj.Acre Acres</p>
+    <p>Zipcode @obj.ZipCode</p>
+  </div>
+</div> 
+        }
+        </li>
+ </body>
